@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 const Forecast = () => {
+   let [responseObj, setResponseObj ] = useState ({});
    function getForecast() {
-      // weather data fetch function will go here
+      fetch("https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=San%20Antonio", {
+         "method": "GET",
+         "headers": {
+            "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+            "x-rapidapi-key": "266bc2b71cmshbb78cfc2479da47p1be11ajsn2733c6547a4b"
+         }
+      })
+.then (response => response.json())
+.then(response => {
+	setResponseObj(response)
+})
+.catch(err => {
+	console.log(err);
+});
    }
    return (
     <div>

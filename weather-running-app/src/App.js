@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './clouds.svg';
 import './App.css';
+import Forecast from "./components/forecast/Forecast"
 
 function App() {
   return (
@@ -18,9 +19,11 @@ function App() {
         >
           Learn React
         </a> */}
-        <h1>React Weather App</h1>
-      </header>
+         <img src={logo} className="App-logo" alt="logo" />
+        <h1>ReactJS Weather App</h1>
+             </header>
       <main>
+        <Forecast />
       </main>
       <footer>
         Page created by Justin Tucker, 2020
