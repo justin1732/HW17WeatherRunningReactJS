@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './clouds.svg';
 import './App.css';
-import Forecast from "./components/forecast/Forecast"
+import Forecast from "./components/forecast/Forecast";
+
 
 function App() {
   return (
